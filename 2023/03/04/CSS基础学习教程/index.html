@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">CSS基础教程 | hojun</title>
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "さくら荘そのGnomeshgh123";
+  mashiro_option.author_name = "Gnomeshgh123";
+  mashiro_option.site_url = "https://gnomeshgh123.github.io/";
+  mashiro_option.v_appId = "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz";
+  mashiro_option.v_appKey = "mgOpfzbkHYqU92CV4IDlAUHQ";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(1).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(2).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(3).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(4).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(5).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(6).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(7).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(8).jpg.webp".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+</head>
+</html>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop filter-dot">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="https://gnomeshgh123.github.io/">
+          <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/avatar.jpg">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>Live your life with passion! With some drive!</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="http://github.com/honjun" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/github.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="http://weibo.com/mashirozx?is_all=1" target="_blank" class="social-github" title="sina">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/sina.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="http://weibo.com/mashirozx?is_all=1" target="_blank" class="social-github" title="wangyiyun">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/wangyiyun.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="http://weibo.com/mashirozx?is_all=1" target="_blank" class="social-github" title="zhihu">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/zhihu.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="http://weibo.com/mashirozx?is_all=1" target="_blank" class="social-github" title="email">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/email.svg">
+                  </a>
+                </li>
+              
+            
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/wechat.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/wechat.jpg">
+                  </div>
+                </li>
+              
+            
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/wechat.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/wechat.jpg">
+                  </div>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">さくら荘その</span>
+            <span class="shironeko">Gnomeshgh123</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/Gnomeshgh123.github.io/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/Gnomeshgh123.github.io/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/Gnomeshgh123.github.io/categories/技术/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          技术
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/Gnomeshgh123.github.io/categories/生活/">
+                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                          生活
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/Gnomeshgh123.github.io/categories/资源/">
+                          <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                          资源
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/Gnomeshgh123.github.io/categories/随想/">
+                          <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                          随想
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/Gnomeshgh123.github.io/categories/转载/">
+                          <i class="fa fa-book" aria-hidden="true"></i>
+                          转载
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/Gnomeshgh123.github.io/tags/悦读/">
+                          <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                          书单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/Gnomeshgh123.github.io/bangumi/">
+                          <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                          番组
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/Gnomeshgh123.github.io/music/">
+                          <i class="fa fa-headphones" aria-hidden="true"></i>
+                          歌单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/Gnomeshgh123.github.io/tags/图集/">
+                          <i class="fa fa-photo" aria-hidden="true"></i>
+                          图集
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/Gnomeshgh123.github.io/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/Gnomeshgh123.github.io/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人帐
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/Gnomeshgh123.github.io/donate/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+                    赞赏
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/Gnomeshgh123.github.io/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/Gnomeshgh123.github.io/about/">
+                          <i class="fa fa-meetup" aria-hidden="true"></i>
+                          我？
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/Gnomeshgh123.github.io/theme-sakura/">
+                          <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                          主题
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/Gnomeshgh123.github.io/lab/">
+                          <i class="fa fa-cogs" aria-hidden="true"></i>
+                          Lab
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/Gnomeshgh123.github.io/client/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-android faa-vertical" aria-hidden="true"></i>
+                    客户端
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/Gnomeshgh123.github.io/atom.xml">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+                    RSS
+                  </span>
+                </a>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+          <header class="entry-header">
+            <h1 class="entry-title">CSS基础教程</h1>
+            <p class="entry-census">&nbsp;·&nbsp;2023-3-4&nbsp;·&nbsp;<span id="busuanzi_value_page_pv"></span>次阅读</p></p>
+
+            <hr>
+          </header>
+        
+        <div class="entry-content">
+          <h1 id="一、CSS基础教程"><a href="#一、CSS基础教程" class="headerlink" title="一、CSS基础教程"></a>一、CSS基础教程</h1><h2 id="1-1-CSS介绍"><a href="#1-1-CSS介绍" class="headerlink" title="1.1 CSS介绍"></a>1.1 CSS介绍</h2><p>CSS[^1] 是一种描述 HTML 文档样式的语言。CSS 描述应该如何显示 HTML 元素。<br>[^1]:也称级联样式表。</p>
+<p>定义：</p>
+<ul>
+<li>CSS 指的是层叠样式表* (Cascading Style Sheets)；</li>
+<li>CSS 描述了如何在屏幕、纸张或其他媒体上显示 HTML 元素；</li>
+<li>CSS 节省了大量工作。它可以同时控制多张网页的布局；</li>
+<li>外部样式表存储在 CSS 文件中。<h2 id="1-2-CSS语法"><a href="#1-2-CSS语法" class="headerlink" title="1.2 CSS语法"></a>1.2 CSS语法</h2>CSS 规则集（rule-set）由选择器和声明块组成：</li>
+</ul>
+<pre><code class="css">/* h1是选择器，color是属性，white是值，属性+值表示声明 */
+h1 {color:white;}
+</code></pre>
+<ul>
+<li>选择器指向您需要设置样式的 HTML 元素。</li>
+<li>声明块包含一条或多条<code>用分号分隔</code>的声明。</li>
+<li>每条声明都包含一个 CSS 属性名称和一个值，以<code>冒号分隔</code>。</li>
+<li>多条 CSS 声明用分号分隔，声明块用花括号括起来。</li>
+</ul>
+<h2 id="1-3-CSS选择器"><a href="#1-3-CSS选择器" class="headerlink" title="1.3 CSS选择器"></a>1.3 CSS选择器</h2><ol>
+<li>元素选择器:根据元素名称来选择 HTML 元素。</li>
+</ol>
+<pre><code class="css">p {
+  text-align: center;
+  color: red;
+}
+</code></pre>
+<ol start="2">
+<li>id选择器:使用 HTML 元素的 id 属性来选择特定元素。==元素的 id== 在页面中是<code>唯一</code>的，因此 id 选择器用于选择一个唯一的元素！<pre><code class="css">#para1 {
+text-align: center;
+color: red;
+}
+</code></pre>
+在html中，id属性，这样运作：<pre><code class="html">&lt;!--实例： --&gt;
+&lt;p id=&quot;para1&quot;&gt;Hello World!&lt;/p&gt;
+&lt;p&gt;本段不受样式的影响。&lt;/p&gt;
+</code></pre>
+</li>
+</ol>
+<blockquote>
+<p>注意：id 名称不能以数字开头。</p>
+</blockquote>
+<ol start="3">
+<li>类选择器：选择有特定 class 属性的 HTML 元素。</li>
+</ol>
+<p>在此例中，所有带有 class=”center” 的 HTML 元素将为红色且居中对齐：</p>
+<pre><code class="css">/* 所有带有 class=&quot;center&quot; 的 HTML 元素将为红色且居中对齐：*/
+.center {
+  text-align: center;
+  color: red;
+}
+
+/* 只有具有 class=&quot;center&quot; 的 &lt;p&gt; 元素会居中对齐：*/
+p.center {
+  text-align: center;
+  color: red;
+}
+</code></pre>
+<ol start="4">
+<li>CSS 通用选择器:通用选择器（*）选择页面上的所有的 HTML 元素。</li>
+</ol>
+<pre><code class="css">* {
+  text-align: center;
+  color: blue;
+}
+</code></pre>
+<p>5.分组选择器</p>
+<pre><code class="css">h1, h2, p {
+  text-align: center;
+  color: red;
+}
+</code></pre>
+<p>6.总结：<br>|选择器|    例子|    例子描述|<br>|—|—|–|<br>|.class    |.intro|    选取所有 class=”intro” 的元素。</p>
+<p>#id|    #firstname|    选取 id=”firstname” 的那个元素。<br><em>|</em>|    选取所有元素。|<br>element |p|    选取所有 &lt; p&gt; 元素。<br>element,element,..    |div, p    |  选取所有 &lt; div&gt; 元素和所有 &lt; p&gt; 元素。</p>
+<p>7.其他选择器<br> 组合选择器 伪类选择器 伪元素选择器 属性选择器等知识的学习，请点击： <a href="https://www.w3school.com.cn/css/css_pseudo_classes.asp" target="_blank" rel="noopener">伪类（转载自w3school）</a></p>
+<h2 id="1-4-三种插入CSS样式表的方法"><a href="#1-4-三种插入CSS样式表的方法" class="headerlink" title="1.4 三种插入CSS样式表的方法"></a>1.4 三种插入CSS样式表的方法</h2><ol>
+<li><p>外部方式</p>
+<pre><code class="html">&lt;head&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;mystyle.css&quot;&gt;
+&lt;/head&gt;
+</code></pre>
+<blockquote>
+<ol>
+<li>外部 .css 文件<code>不应包含任何 HTML 标签</code>。</li>
+<li><code>请勿在属性值和单位之间添加空格</code>（例如 margin-left:  <strong>20 px</strong> ;）。正确的写法是：margin-left:  ==<strong>20px</strong>== ;</li>
+</ol>
+</blockquote>
+</li>
+<li><p>内部样式:内部样式是在 head 部分的 &lt; style&gt; 元素中进行定义。</p>
+</li>
+<li>行内 CSS:行内样式（也称内联样式）可用于为单个元素应用唯一的样式。如需使用行内样式，请将 style 属性添加到相关元素。style 属性可包含任何 CSS 属性。</li>
+</ol>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1 style=&quot;color:blue;text-align:center;&quot;&gt;This is a heading&lt;/h1&gt;
+&lt;p style=&quot;color:red;&quot;&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<ul>
+<li>如果内部样式是在链接到外部样式表之后定义的，显示内部样式表。<pre><code class="html">&lt;head&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;mystyle.css&quot;&gt;
+&lt;style&gt;
+h1 {
+color: orange;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+</code></pre>
+</li>
+<li>不过，如果在链接到外部样式表之前定义了内部样式，显示外部样式表。<pre><code class="html">&lt;head&gt;
+&lt;style&gt;
+h1 {
+color: orange;
+}
+&lt;/style&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;mystyle.css&quot;&gt;
+&lt;/head&gt;
+</code></pre>
+</li>
+</ul>
+<ol start="4">
+<li>层叠顺序<br>页面中的所有样式将按照以下规则“层叠”为新的“虚拟”样式表，其中第一优先级最高：</li>
+</ol>
+<ul>
+<li>行内样式（在 HTML 元素中）</li>
+<li>外部和内部样式表（在 head 部分）</li>
+<li>浏览器默认样式<blockquote>
+<p>因此，行内样式具有最高优先级，并且将覆盖外部和内部样式以及浏览器默认样式。</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="1-5-CSS位置"><a href="#1-5-CSS位置" class="headerlink" title="1.5 CSS位置"></a>1.5 CSS位置</h2><p>position是css为某些元素提供定位的属性，它有五种常规取值。<br>其中：<br><code>width</code>：表示元素的宽度。<br><code>height</code>：表示元素的高度。</p>
+<blockquote>
+<p>height 和 width 属性不包括内边距、边框或外边距。它设置的是元素内边距、边框以及外边距内的区域的高度或宽度。</p>
+</blockquote>
+<p><code>top</code>：表示元素相对于顶部的距离。<br><code>left</code>：表示元素相对于左边的距离。</p>
+<ul>
+<li>相对定位：当position取值为<code>relative</code>时，该元素为相对定位，相对自身位置定位，不会脱离文档流，可以使用z-index进行分层。它可以根据文档正常流动偏移相对于它本身top、bottom、right和left的值，偏移量不会影响其他元素的位置。</li>
+<li>绝对定位：当position取值为<code>absolute</code>元素是绝对定位，脱离文档流的布局，后面的元素会填补它空下来的位置，它的起始位置为最近的position值不是static的父元素，若没有则是以HTML为准，由top、bottom、left、right确定最终位置，可以使用z-index 进行分层。</li>
+<li>固定定位（笃定定位）：当position的取值为<code>fixed</code>时，该元素为固定定位，脱离文档流，它的起始起始位置相对于视口且是固定位置不随滚动条的滑动而滚动。一般像导航栏大多数会使用固定定位。</li>
+<li>粘性定位：当position取值为<code>sticky</code>时该元素为粘性定位，它也会脱离文档流，会在文档流中预留该元素的物理空间；它的相对偏移是相对于父标签而言，设置top等值只会在父标签中sticky。</li>
+</ul>
+<h2 id="1-6-CSS颜色"><a href="#1-6-CSS颜色" class="headerlink" title="1.6 CSS颜色"></a>1.6 CSS颜色</h2><ol>
+<li>背景颜色 background - color</li>
+<li>文本颜色 color</li>
+<li>边框颜色 <pre><code class="html">&lt;h1 style=&quot;border:2px solid DodgerBlue;&quot;&gt;Hello World&lt;/h1&gt;
+</code></pre>
+4.其他设置颜色的方法，包括<code>透明度</code><pre><code class="html">&lt;!-- rgb(red, green, blue)，参数的范围在0-255--&gt;
+&lt;!-- 
+要显示黑色，请将所有颜色参数设置为 0，如下所示：rgb(0, 0, 0)。
+要显示白色，请将所有颜色参数设置为 255，如下所示：rgb(255, 255, 255)。
+--&gt;
+&lt;h1 style=&quot;background-color:rgb(255, 99, 71);&quot;&gt;...&lt;/h1&gt;
+&lt;h1 style=&quot;background-color:#ff6347;&quot;&gt;...&lt;/h1&gt;
+&lt;!--
+hsla(hue, saturation, lightness)
+色相（hue）是色轮上从 0 到 360 的度数。0 是红色，120 是绿色，240 是蓝色。
+饱和度（saturation）是一个百分比值，0％ 表示灰色阴影，而 100％ 是全色。
+亮度（lightness）也是百分比，0％ 是黑色，50％ 是既不明也不暗，100％是白色。
+--&gt;
+&lt;h1 style=&quot;background-color:hsl(9, 100%, 64%);&quot;&gt;...&lt;/h1&gt;
+&lt;!--
+rgba(red, green, blue, alpha)
+alpha 参数是介于 0.0（完全透明）和 1.0（完全不透明）之间的数字：
+--&gt;
+&lt;h1 style=&quot;background-color:rgba(255, 99, 71, 0.5);&quot;&gt;...&lt;/h1&gt;
+&lt;h1 style=&quot;background-color:hsla(9, 100%, 64%, 0.5);&quot;&gt;...&lt;/h1&gt;
+</code></pre>
+<h2 id="1-7-CSS背景"><a href="#1-7-CSS背景" class="headerlink" title="1.7 CSS背景"></a>1.7 CSS背景</h2><code>`</code>css<br>body{<br>/<em>背景颜色，背景图像（也可以单独添加到类选择器里面）</em>/<br>background-color:<br>background-image: </li>
+</ol>
+<p>/<em>背景重复，参数有 repeat-x【水平重复】,repeat-y，no-repeat【只显示一次】</em><br>background-repeat:<br>/<em>背景是否固定：fixed（固定），scroll（滚动）</em>/<br>background-attachment:<br>/<em>背景位置，属性值示例：center top/top center </em>/<br>background-position:<br>/<em><br>opacity 属性指定元素的不透明度/透明度。<br>如果您不希望对子元素应用不透明度，例如上面的例子，请使用 RGBA 颜色值。
+</em>/<br>}</p>
+<pre><code>
+
+- 属性background-orign：当attachment不为fixed的时候有用。
+
+|值|    描述|
+|---|---|
+|padding-box    |背景图像相对于内边距框来定位。|    
+border-box|    背景图像相对于边框盒来定位。|    
+content-box|    背景图像相对于内容框来定位。    |
+
+- 属性background-clip：
+
+值    |描述
+--|--
+border-box|    背景被裁剪到边框盒。
+padding-box|    背景被裁剪到内边距框。    
+content-box|    背景被裁剪到内容框。
+## 1.8 CSS边框
+`border-style` 
+```html
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+p.dotted {border-style: dotted;}
+p.dashed {border-style: dashed;}
+p.solid {border-style: solid;}
+p.double {border-style: double;}
+p.groove {border-style: groove;}
+p.ridge {border-style: ridge;}
+p.inset {border-style: inset;}
+p.outset {border-style: outset;}
+p.none {border-style: none;}
+p.hidden {border-style: hidden;}
+p.mix {border-style: dotted dashed solid double;}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;border-style 属性&lt;/h1&gt;
+
+&lt;p&gt;此属性规定要显示的边框类型：&lt;/p&gt;
+
+&lt;p class=&quot;dotted&quot;&gt;点状边框。&lt;/p&gt;
+&lt;p class=&quot;dashed&quot;&gt;虚线边框。&lt;/p&gt;
+&lt;p class=&quot;solid&quot;&gt;实线边框。&lt;/p&gt;
+&lt;p class=&quot;double&quot;&gt;双线边框。&lt;/p&gt;
+&lt;p class=&quot;groove&quot;&gt;凹槽边框。&lt;/p&gt;
+&lt;p class=&quot;ridge&quot;&gt;垄状边框。&lt;/p&gt;
+&lt;p class=&quot;inset&quot;&gt;3D inset 边框。&lt;/p&gt;
+&lt;p class=&quot;outset&quot;&gt;3D outset 边框。&lt;/p&gt;
+&lt;p class=&quot;none&quot;&gt;无边框。&lt;/p&gt;
+&lt;p class=&quot;hidden&quot;&gt;隐藏边框。&lt;/p&gt;
+&lt;p class=&quot;mix&quot;&gt;混合边框。&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p><code>border</code>的其他属性，例如color，他的属性可以设置一到四个值（用于上边框、右边框、下边框和左边框），也就是==顺时针==方向。</p>
+<p><code>border-radius</code> 属性用于向元素添加圆角边框：</p>
+<pre><code class="css">p {
+  border: 2px solid red;
+  border-radius: 5px;
+}
+</code></pre>
+<h2 id="1-9-CSS的边距、盒模型和轮廓"><a href="#1-9-CSS的边距、盒模型和轮廓" class="headerlink" title="1.9 CSS的边距、盒模型和轮廓"></a>1.9 CSS的边距、盒模型和轮廓</h2><ol>
+<li>外边距margin<blockquote>
+<p>外边距合并指的是，当两个垂直外边距相遇时，它们将形成一个外边距。合并后的外边距的高度等于两个发生合并的外边距的高度中的较大者。<br>具体请看：<a href="https://www.w3school.com.cn/css/css_margin_collapse.asp" target="_blank" rel="noopener">w3school</a></p>
+</blockquote>
+</li>
+<li>内边距padding<blockquote>
+<p>CSS <code>width</code> 属性指定元素内容区域的宽度。内容区域是元素（盒模型）的内边距、边框和外边距内的部分。如果元素拥有指定的宽度，则添加到该元素的内边距会添加到元素的总宽度中。这通常是不希望的结果。<br>若要将宽度保持为 300px，无论填充量如何，那么您可以使用 <code>box-sizing</code>属性。这将导致元素保持其宽度。如果增加内边距，则可用的内容空间会减少。</p>
+</blockquote>
+</li>
+<li>盒模型</li>
+</ol>
+<ul>
+<li>外边距<code>margin</code></li>
+<li>边框<code>border</code></li>
+<li>内边距<code>padding</code></li>
+<li>元素<code>element</code></li>
+</ul>
+<blockquote>
+<p>提示：背景应用于由内容和内边距、边框组成的区域。==内边距呈现了元素的背景==。内边距的边缘是边框。边框以外是外边距，==外边距默认是透明的==，因此不会遮挡其后的任何元素。</p>
+<p><font color="orange"><strong>提示</strong> </font>：外边距可以是负值，而且在很多情况下都要使用负值的外边距。</p>
+<p><font color="red"><strong>重要提示</strong></font>：使用 CSS 设置元素的 width 和 height 属性时，只需设置内容区域的宽度和高度。要计算元素的完整大小，还必须把内边距、边框和外边距加起来。</p>
+</blockquote>
+<ol start="4">
+<li>轮廓<code>outline</code><br>轮廓是在元素周围绘制的一条线，在边框之外，以凸显元素。<blockquote>
+<p>注意：轮廓与边框不同！不同之处在于：轮廓是在元素边框之外绘制的，并且可能与其他内容重叠。同样，轮廓也不是元素尺寸的一部分；==元素的总宽度和高度不受轮廓线宽度的影响==。</p>
+</blockquote>
+</li>
+</ol>
+<p><code>outline-offset</code>属性：可以让轮廓偏移，也就是在边框和轮廓之间留出空白。</p>
+<h2 id="1-10-CSS文本格式"><a href="#1-10-CSS文本格式" class="headerlink" title="1.10 CSS文本格式"></a>1.10 CSS文本格式</h2><p>有以下主要属性：<br><code>color</code><br><code>bakcground-color</code><br><code>text-algin</code>：文本对齐属性：左右或者居中</p>
+<blockquote>
+<p>当 text-align 属性设置为 <code>justify</code> 后，将拉伸每一行，以使每一行具有相等的宽度，并且左右边距是直的（就像在杂志和报纸中）</p>
+</blockquote>
+<p><code>text-decoration: none</code>:通常用于从链接上删除下划线。</p>
+<pre><code class="css">/*删除下划线*/
+a {
+  text-decoration: none;
+}
+
+/*新增上划线，删除线，下划线*/
+h1 {
+  text-decoration: overline;
+}
+
+h2 {
+  text-decoration: line-through;
+}
+
+h3 {
+  text-decoration: underline;
+}
+</code></pre>
+<p>  <code>white-space: nowrap</code>用于阻止文本换行。<br>  <code>text-shadow</code>：添加文字阴影。</p>
+<pre><code class="css">  h1 {
+  text-shadow: 2px 2px 5px red;
+}
+
+</code></pre>
+<blockquote>
+<p>其他字符属性或者字符间距属性请<a href="https://www.w3school.com.cn/css/css_padding.asp" target="_blank" rel="noopener">点击此按钮跳转</a></p>
+</blockquote>
+<p>属性|    描述<br>|—|—|<br>color    |设置文本颜色。<br>direction |    指定文本的方向 / 书写方向。<br>letter-spacing    |设置字符间距。<br>line-height|    设置行高。<br>text-align|    指定文本的水平对齐方式。<br>text-decoration|    指定添加到文本的装饰效果。<br>text-indent    |指定文本块中首行的缩进。<br>text-shadow    |指定添加到文本的阴影效果。<br>text-transform|    控制文本的大小写。<br>text-overflow    |指定应如何向用户示意未显示的溢出内容。<br>unicode-bidi    与 direction 属性|一起使用，设置或返回是否应重写文本来支持同一文档中的多种语言。<br>vertical-align    |指定文本的垂直对齐方式。<br>white-space|    指定如何处理元素内的空白。<br>word-spacing    |设置单词间距。</p>
+<h2 id="1-11-CSS字体"><a href="#1-11-CSS字体" class="headerlink" title="1.11 CSS字体"></a>1.11 CSS字体</h2><p>在 CSS 中，有五个通用字体族：</p>
+<ul>
+<li>衬线字体（Serif）- 在每个字母的边缘都有一个小的笔触。它们营造出一种形式感和优雅感。</li>
+<li>无衬线字体（Sans-serif）- 字体线条简洁（没有小笔画）。它们营造出现代而简约的外观。</li>
+<li>等宽字体（Monospace）- 这里所有字母都有相同的固定宽度。它们创造出机械式的外观。</li>
+<li>草书字体（Cursive）- 模仿了人类的笔迹。</li>
+<li>幻想字体（Fantasy）- 是装饰性/俏皮的字体。<blockquote>
+<p><font color="orange">提示</font>：在计算机屏幕上，无衬线字体被认为比衬线字体更易于阅读。</p>
+</blockquote>
+</li>
+</ul>
+<p><code>font-family</code>属性用来设置文本的字体。<br><code>font-style</code>属性设置字体的倾斜。<br><code>font-size</code>属性设置字体的大小。</p>
+<blockquote>
+<p>为了允许用户调整文本大小（在浏览器菜单中），许多开发人员使用 em 而不是像素。可以使用这个公式从像素到 em 来计算大小：==pixels/16=em==。</p>
+</blockquote>
+<p>如果您不想使用 HTML 中的任何标准字体，则可以使用 Google Fonts API 向页面添加数百种其他字体。只需添加一个样式表链接并<strong>引用</strong>您选择的字体系列：</p>
+<pre><code class="html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css?family=Sofia&quot;&gt;
+</code></pre>
+<p><strong>所有 CSS 字体属性</strong>:<br>属性|描述<br>|—|—|<br>font    |简写属性。在一条声明中设置所有字体属性。<br>font-family|    规定文本的字体系列（字体族）。<br>font-size|    规定文本的字体大小。<br>font-style|    规定文本的字体样式。<br>font-variant|    规定是否以小型大写字母的字体显示文本。<br>font-weight|    规定字体的粗细。</p>
+<h2 id="1-12-CSS的图标"><a href="#1-12-CSS的图标" class="headerlink" title="1.12 CSS的图标"></a>1.12 CSS的图标</h2><p>向 HTML 页面添加图标的最简单方法是使用图标库，比如 <code>Font Awesome</code>。将指定的图标类的名称添加到任何行内 HTML 元素（如 &lt; i&gt; 或 &lt; span&gt;）。使用方法如下：</p>
+<ul>
+<li>如需使用 Font Awesome 图标，请访问 fontawesome.com，登录并获取代码添加到 HTML 页面的 <head><meta name="generator" content="Hexo 3.9.0"> 部分：<pre><code class="html">&lt;!-- 添加到头部head--&gt;
+&lt;script src=&quot;https://kit.fontawesome.com/yourcode.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+</head></li>
+<li>如需使用 Bootstrap glyphicons，请在 HTML 页面的 <head><meta name="generator" content="Hexo 3.9.0"> 部分内添加这行：<pre><code class="html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&quot;&gt;
+</code></pre>
+</head></li>
+<li>如需使用 Google 图标，请在HTML页面的 <head><meta name="generator" content="Hexo 3.9.0"> 部分中添加以下行：<pre><code class="html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/icon?family=Material+Icons&quot;&gt;
+</code></pre>
+<h2 id="1-13-CSS的链接"><a href="#1-13-CSS的链接" class="headerlink" title="1.13 CSS的链接"></a>1.13 CSS的链接</h2>链接可以使用任何 CSS 属性（例如·<code>color</code>、<code>font-family</code>、<code>background</code> 等）来设置样式。</head></li>
+</ul>
+<p>四种链接状态分别是：</p>
+<ul>
+<li>a:link - 正常的，未访问的链接</li>
+<li>a:visited - 用户访问过的链接</li>
+<li>a:hover - 用户将鼠标悬停在链接上时</li>
+<li>a:active - 链接被点击时<br><code>`</code>css<br>/<em> 未被访问的链接 </em>/<br>a:link {<br>color: red;<br>}</li>
+</ul>
+<p>/<em> 已被访问的链接 </em>/<br>a:visited {<br>  color: green;<br>}</p>
+<p>/<em> 将鼠标悬停在链接上 </em>/<br>a:hover {<br>  color: hotpink;<br>}</p>
+<p>/<em> 被选择的链接 </em>/<br>a:active {<br>  color: blue;<br>}</p>
+<pre><code>&gt; 如果为多个链接状态设置样式，请遵循如下顺序规则：
+(1) a:hover 必须 a:link 和 a:visited 之后
+(2) a:active 必须在 a:hover 之后
+
+&lt;font color = orange&gt;好看的链接样式&lt;/font&gt;：
+```css
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center; 
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+</code></pre><h2 id="1-14-CSS的列表和表格"><a href="#1-14-CSS的列表和表格" class="headerlink" title="1.14 CSS的列表和表格"></a>1.14 CSS的列表和表格</h2><ol>
+<li>列表</li>
+</ol>
+<p>在 HTML 中，列表主要有两种类型：</p>
+<p>无序列表（&lt; ul&gt;）</p>
+<ul>
+<li>列表项用的是项目符号标记</li>
+</ul>
+<p>有序列表（&lt; ol&gt;）</p>
+<ul>
+<li>列表项用的是数字或字母标记</li>
+</ul>
+<p>而CSS的作用：</p>
+<ul>
+<li>为有序列表设置不同的列表项标记</li>
+<li>为无序列表设置不同的列表项标记</li>
+<li>将图像设置为列表项标记</li>
+<li>为列表和列表项添加背景色</li>
+</ul>
+<p>主要的属性：<br><code>list-style-type</code><br><code>list-style-image</code><br><code>list-style-position</code>，用于定位列表标记的位置，有两个参数：</p>
+<pre><code class="css">/* outside,让标记位于文本框的外面；inside位于文本框里面，占据文本位置*/
+ul.a {
+  list-style-position: outside;
+}
+
+ul.b {
+  list-style-position: inside;
+}
+
+</code></pre>
+<p>添加到 &lt; ol&gt; 或 &lt; ul&gt; 标记的任何样式都会影响整个列表，而添加到 &lt; li&gt; 标记的属性将影响各个列表项，列表的实际应用如下所示：</p>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+ol {
+  background: #ff9999;
+  padding: 20px;
+  list-style-position: inside;
+}
+
+ul {
+  background: #3399ff;
+  padding: 20px;
+  list-style-position: inside;
+}
+
+ol li {
+  background: #ffe5e5;
+  padding: 5px;
+  margin-left: 35px;
+}
+
+ul li {
+  background: #cce5ff;
+  margin: 5px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;设置列表的颜色样式：&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Coffee&lt;/li&gt;
+  &lt;li&gt;Tea&lt;/li&gt;
+  &lt;li&gt;Coca Cola&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Coffee&lt;/li&gt;
+  &lt;li&gt;Tea&lt;/li&gt;
+  &lt;li&gt;Coca Cola&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<ol start="2">
+<li>表格</li>
+</ol>
+<p>html里面，表格的标签有<code>&lt;table&gt;</code>、<code>&lt;tr&gt;</code>、<code>&lt;th&gt;</code>、<code>&lt;td&gt;</code>，具体请看<br><a href="https://blog.csdn.net/TNANDXYF/article/details/113183923?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167729441816800192227987%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167729441816800192227987&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-1-113183923-null-null.142^v73^control,201^v4^add_ask,239^v2^insert_chatgpt&amp;utm_term=html%E6%A0%87%E7%AD%BEth%EF%BC%8Ctd&amp;spm=1018.2226.3001.4187" target="_blank" rel="noopener">html中table标签、tr标签、th标签、td标签的基础知识(转载)</a></p>
+<p>重点知道：HTML表格由table标签以及一个或多个tr、th或td标签组成：</p>
+<ul>
+<li>table标签：定义一个表格</li>
+<li>caption标签：定义表格标题，嵌套在<code>&lt;table&gt;</code>中</li>
+<li>tr标签：定义表格中的一行，嵌套在<code>&lt;table&gt;</code>中</li>
+<li>th标签：定义表格中的表头单元格，嵌套在<code>&lt;tr&gt;</code>中</li>
+<li>td标签：定义表格中的数据单元格，嵌套在<code>&lt;tr&gt;</code>中</li>
+</ul>
+<p><strong>表格边框</strong><br>如需在 CSS 中设置表格边框，请使用 <code>border</code> 属性。</p>
+<p><strong>全宽表格</strong><br>在某些情况下，上表似乎很小。如果您需要一个可以覆盖整个屏幕（全宽）的表格，请为<code>&lt;table&gt;</code>元素添加 width: 100%：</p>
+<p><strong>合并表格边框</strong><br>请注意设置多标签的表格有双边框。这是因为表格和 th、td 元素都有单独的边框。如需删除双边框，<code>border-collapse</code> 属性设置是否将表格边框折叠为单一边框。</p>
+<p><strong>表格内边距</strong><br>如需控制边框和表格内容之间的间距，请在 <code>&lt;td&gt;</code> 和 <code>&lt;th&gt;</code> 元素上使用<code>padding</code> 属性：</p>
+<pre><code class="css">th, td {
+  padding: 15px;
+  text-align: left;
+}
+</code></pre>
+<p><strong>水平分割线</strong><br>向 <code>&lt;th&gt;</code>和<code>&lt;td&gt;</code> 添加 <code>border-bottom</code> 属性，以实现水平分隔线</p>
+<pre><code class="css">th, td {
+  border-bottom: 1px solid #ddd;
+}
+</code></pre>
+<p><strong>可悬停表格</strong><br>在<code>&lt;tr&gt;</code> 元素上使用 <code>:hover</code> 选择器，以突出显示鼠标悬停时的表格行：</p>
+<pre><code class="css">tr:hover {background-color: #f5f5f5;}
+</code></pre>
+<p><strong>响应式表格</strong><br>如果屏幕太小而无法显示全部内容，则响应式表格会显示水平滚动条；在 <code>&lt;table&gt;</code> 元素周围添加带有<code>overflow-x:auto</code> 的容器元素（例如 <code>&lt;div&gt;</code>），以实现响应式效果：</p>
+<pre><code class="html">&lt;div style=&quot;overflow-x:auto;&quot;&gt;
+
+&lt;table&gt;
+... table content ...
+&lt;/table&gt;
+
+&lt;/div&gt;
+</code></pre>
+<p><strong>总结</strong><br>CSS |表格属性<br>|:—|:—|<br>属性|    描述<br>{text-position:left}border|    简写属性。在一条声明中设置所有边框属性。<br>border-collapse|    规定是否应折叠表格边框。<br>border-spacing|    规定相邻单元格之间的边框的距离。<br>caption-side    |规定表格标题的位置。<br>empty-cells|    规定是否在表格中的空白单元格上显示边框和背景。<br>table-layout|    设置用于表格的布局算法。</p>
+<h1 id="二、未解决的问题"><a href="#二、未解决的问题" class="headerlink" title="二、未解决的问题"></a>二、未解决的问题</h1><p>引号的作用[^2]<br>[^2]:如果字体名称不止一个单词，则必须用引号引起来，例如：”Times New Roman”。</p>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanQR.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/Gnomeshgh123.github.io/2023/03/04/hexo的自定义框架/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                hexo的自定义框架</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/Gnomeshgh123.github.io/2023/03/03/hello-world/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                Hello World</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+        appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+
+
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="" class="profile gravatar"><img src="" itemprop="image" alt="" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="" itemprop="url" rel="author"></a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/Gnomeshgh123.github.io/',
+        CONTENT_URL: '/Gnomeshgh123.github.io/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2023 hojun<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2018</p>
+    </div>
+    <div class="footer-device">
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo, Hosted by Coding Pages</a>
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/avatar.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">さくら荘そのGnomeshgh123</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="http://github.com/honjun" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="http://weibo.com/mashirozx?is_all=1" class="fa fa-weibo" target="_blank" style="color: #dd4b39; margin-left:20px"></a>
+      
+        <a href="https://wpa.qq.com/msgrd?v=3&uin=954655431&site=qq&menu=yes" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/Gnomeshgh123.github.io/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/Gnomeshgh123.github.io/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/Gnomeshgh123.github.io/categories/技术/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/Gnomeshgh123.github.io/categories/生活/">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  生活
+                </a>
+              </li>
+            
+              <li>
+                <a href="/Gnomeshgh123.github.io/categories/资源/">
+                  <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                  资源
+                </a>
+              </li>
+            
+              <li>
+                <a href="/Gnomeshgh123.github.io/categories/随想/">
+                  <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                  随想
+                </a>
+              </li>
+            
+              <li>
+                <a href="/Gnomeshgh123.github.io/categories/转载/">
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                  转载
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/Gnomeshgh123.github.io/tags/悦读/">
+                  <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                  书单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/Gnomeshgh123.github.io/bangumi/">
+                  <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                  番组
+                </a>
+              </li>
+            
+              <li>
+                <a href="/Gnomeshgh123.github.io/music/">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                  歌单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/Gnomeshgh123.github.io/tags/图集/">
+                  <i class="fa fa-photo" aria-hidden="true"></i>
+                  图集
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/Gnomeshgh123.github.io/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/Gnomeshgh123.github.io/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人帐
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/Gnomeshgh123.github.io/donate/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            赞赏
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/Gnomeshgh123.github.io/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/Gnomeshgh123.github.io/about/">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  我？
+                </a>
+              </li>
+            
+              <li>
+                <a href="/Gnomeshgh123.github.io/theme-sakura/">
+                  <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                  主题
+                </a>
+              </li>
+            
+              <li>
+                <a href="/Gnomeshgh123.github.io/lab/">
+                  <i class="fa fa-cogs" aria-hidden="true"></i>
+                  Lab
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/Gnomeshgh123.github.io/client/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-android faa-vertical" aria-hidden="true"></i>
+            客户端
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/Gnomeshgh123.github.io/atom.xml">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+            RSS
+          </span>
+        </a>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="2660651585"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+</body>
+</html>
